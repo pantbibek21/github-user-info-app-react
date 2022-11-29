@@ -15,7 +15,9 @@ function Input({ getUsername }) {
       setNotification("Invalid username 😭,username cannot have space :(");
       return;
     }
-    getUsername(input);
+    let transformUserName = input.slice(0, 1).toLowerCase() + input.slice(1);
+    setNotification("Loading...🙄");
+    getUsername(transformUserName, setNotification);
   };
 
   const onChangeHandler = (event) => {
@@ -35,6 +37,9 @@ function Input({ getUsername }) {
     <React.Fragment>
       <form onSubmit={onSubmitHandler}>
         <input
+          onClick={() => {
+            setNotification("");
+          }}
           type="text"
           value={input}
           onChange={onChangeHandler}

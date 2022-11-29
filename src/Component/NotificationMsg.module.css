@@ -3,7 +3,7 @@
   color: red;
   font-family: "Courier New", Courier, monospace;
   position: absolute;
-  bottom: -60px;
+  top: 260px;
   left: 50%;
   transform: translateX(-50%);
 }
