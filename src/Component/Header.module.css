@@ -1,0 +1,24 @@
+/*HEADING STYLE BEGINS HERE */
+
+.header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.179);
+  text-align: center;
+  padding: 20px 20px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.037);
+  position: relative;
+}
+
+.header .heading-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 28px;
+  margin-bottom: 12px;
+  cursor: default;
+}
+
+.heading-text span {
+  background-color: rgb(217, 255, 0);
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0 4px;
+}

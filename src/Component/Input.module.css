@@ -1,0 +1,32 @@
+input {
+  display: block;
+  width: 90%;
+  padding: 12px 20px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.235);
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.button {
+  width: 120px;
+  padding: 8px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 12px;
+  border: none;
+  outline: 1px solid black;
+  transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+  background-color: rgb(51, 255, 0);
+}
+.clear-btn:hover {
+  background-color: red;
+}
+.button:active {
+  color: blue;
+}

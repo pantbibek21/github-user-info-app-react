@@ -1,0 +1,9 @@
+.message {
+  width: 90%;
+  color: red;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
