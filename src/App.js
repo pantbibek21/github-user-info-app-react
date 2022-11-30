@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Header from "./Component/Header";
-import NotificationMsg from "./Component/NotificationMsg";
+import Header from "./Component/Header/Header";
+import Container from "./Component/Main/Container";
 
 const App = () => {
+  const [isDataArrived, setIsDataArrived] = useState(false);
   const notification = {};
+  const githubUserData = {};
   const fetchUser = async (user) => {
     try {
       const response = await fetch(`https://api.github.com/users/${user}`);
@@ -16,6 +18,10 @@ const App = () => {
       }
       const data = await response.json();
       //set the data to UI
+      //Configure the data Object and send to component Container
+
+      // setIsDataArrived(true);
+
       notification.set("");
     } catch (error) {
       notification.set(error.message);
@@ -29,6 +35,8 @@ const App = () => {
   return (
     <div className="container">
       <Header getUsername={getUsername} />
+      {/* {isDataArrived && <Container />} */}
+      <Container></Container>
     </div>
   );
 };
