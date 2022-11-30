@@ -1,0 +1,8 @@
+.heading {
+  font-size: 32px;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.234);
+}

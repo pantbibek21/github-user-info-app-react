@@ -8,10 +8,53 @@
   gap: 30px;
   margin-bottom: 40px;
 }
+.octacat-wrapper {
+  top: 100px;
+  right: 100px;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.octacat-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personalReposWrapper,
+.forkedReposWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
 
 @media screen and (max-width: 1014px) {
   .top-wrapper {
     gap: 0px;
     flex-direction: column;
+  }
+  .octacat-wrapper {
+    width: 160px;
+    height: 160px;
+    top: 200px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 856px) {
+  .personalReposWrapper,
+  .forkedReposWrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .octacat-wrapper {
+    top: 260px;
+    width: 100px;
+    height: 100px;
   }
 }

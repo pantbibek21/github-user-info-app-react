@@ -1,0 +1,31 @@
+.repo {
+  /* border: 2px solid red; */
+  width: 48%;
+  box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.556);
+  margin-bottom: 20px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 856px) {
+  .repo {
+    width: 100%;
+  }
+}
+.repo .repo-name {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.869);
+}
+.repo .label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.921);
+  display: inline-block;
+  margin-top: 8px;
+}
+.repo .repo-link {
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 8px;
+}
