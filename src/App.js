@@ -6,7 +6,7 @@ import Container from "./Component/Main/Container";
 const App = () => {
   const [isDataArrived, setIsDataArrived] = useState(false);
   const notification = {};
-  const githubUserData = {};
+  let githubUserData = {};
   const fetchUser = async (user) => {
     try {
       const response = await fetch(`https://api.github.com/users/${user}`);
@@ -19,8 +19,8 @@ const App = () => {
       const data = await response.json();
       //set the data to UI
       //Configure the data Object and send to component Container
-
-      // setIsDataArrived(true);
+      githubUserData = data;
+      setIsDataArrived(true);
 
       notification.set("");
     } catch (error) {
@@ -35,8 +35,7 @@ const App = () => {
   return (
     <div className="container">
       <Header getUsername={getUsername} />
-      {/* {isDataArrived && <Container />} */}
-      <Container></Container>
+      {isDataArrived && <Container data={githubUserData} />}
     </div>
   );
 };

@@ -8,6 +8,7 @@ import ForkedRepos from "./ForkedRepos";
 import octacat from "../../Assets/octacat.png";
 
 const Container = (props) => {
+  console.log(props.data);
   return (
     <div className={styles.container}>
       <Wrapper class="top-wrapper">

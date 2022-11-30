@@ -12,7 +12,7 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.18);
   /* gap: 80px; */
   margin-bottom: 40px;
-  color: white;
+  color: rgba(255, 255, 255, 0.833);
 }
 
 .user-card .img-wrapper {
@@ -26,6 +26,7 @@
 .user-card .bio {
   margin-bottom: 12px;
   text-align: center;
+  color: rgba(255, 255, 255, 0.777);
 }
 
 .img-wrapper img {
@@ -45,16 +46,22 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 12px;
+  color: white;
 }
 .nameWrapper .username {
   display: block;
   text-align: right;
-  color: darkblue;
+  color: rgb(1, 1, 87);
   font-size: 16px;
+}
+.nameWrapper .username:hover {
+  color: rgba(4, 4, 121, 0.985);
 }
 
 .user-card .followers-wrapper {
   font-size: 14px;
+  margin-left: 20px;
+  position: relative;
 }
 
 .followers-wrapper .dot {
@@ -63,4 +70,12 @@
   height: 3px;
   margin: auto 4px;
   background-color: rgba(245, 245, 245, 0.639);
+}
+
+.icon {
+  position: absolute;
+  top: -2px;
+  left: -22px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.743);
 }

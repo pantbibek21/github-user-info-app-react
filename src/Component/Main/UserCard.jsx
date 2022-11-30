@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./UserCard.module.css";
+import { FaUsers } from "react-icons/fa";
 const UserCard = () => {
+  let classname = "class";
   return (
     <div className={styles["user-card"]}>
       <div className={styles["img-wrapper"]}>
@@ -18,7 +20,9 @@ const UserCard = () => {
       </div>
       <div className={styles["bio"]}>I am a super hero</div>
       <div className={styles["followers-wrapper"]}>
-        <i class="fa-solid fa-user-group"></i>
+        <div className={styles.icon}>
+          <FaUsers />
+        </div>
         <span className={`${styles["count"]} ${styles["following-count"]}`}>
           12
         </span>{" "}
