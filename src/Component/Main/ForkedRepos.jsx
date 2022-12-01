@@ -4,12 +4,14 @@ import Heading from "./Heading";
 import RepoCard from "./RepoCard";
 import Wrapper from "./Wrapper";
 
-const ForkedRepos = () => {
+const ForkedRepos = ({ repoConfigObjectArr }) => {
   return (
     <React.Fragment>
       <Heading class="heading">Forked Repos</Heading>;
       <Wrapper class="forkedReposWrapper">
-        <RepoCard></RepoCard>
+        {repoConfigObjectArr.map((data, index) => {
+          return <RepoCard data={data} key={index}></RepoCard>;
+        })}
       </Wrapper>
     </React.Fragment>
   );

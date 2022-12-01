@@ -1,52 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Organization from "./Organization";
 import styles from "./UserInfo.module.css";
 
-const UserInfo = () => {
+const UserInfo = ({ data, starEarnCount, publicReposCount }) => {
+  const endIndex = data.created_at.indexOf("T");
+  const created_on = data.created_at.slice(0, endIndex);
+  const last_committed_on = data.updated_at.slice(0, endIndex);
+  const organizationUrl = data.organizations_url;
+
   return (
     <div className={styles["user-details"]}>
       <div className={styles["row"]}>
         <label>Name : </label>
-        <span>Bibek Pant</span>
+        <span>{data.name}</span>
       </div>
       <div className={styles["row"]}>
         <label>Username : </label>
-        <span>pantbibek21</span>
+        <span>{data.login}</span>
       </div>
       <div className={styles["row"]}>
         <label>Location : </label>
-        <span>Kathmandu, Nepal</span>
+        <span>{data.location || "N/A"}</span>
       </div>
       <div className={styles["row"]}>
         <label>Website : </label>
-        <span>bibekpant.com.np</span>
+        <span>{data.blog || "N/A"}</span>
       </div>
       <div className={styles["row"]}>
         <label>Twitter : </label>
-        <span>pantbiebk21</span>
+        <span>{data.twitter_username || "N/A"}</span>
       </div>
       <div className={styles["row"]}>
         <label>Public Repository : </label>
-        <span>30</span>
+        <span>{publicReposCount}</span>
       </div>
       <div className={styles["row"]}>
         <label>Star earned: </label>
-        <span>12</span>
+        <span>{starEarnCount}</span>
       </div>
       <div className={styles["row"]}>
         <label>Total Commits : </label>
-        <span>121</span>
+        <span>Couldn't count</span>
       </div>
       <div className={styles["row"]}>
         <label>Created on : </label>
-        <span>2018-12-12</span>
+        <span>{created_on}</span>
       </div>
       <div className={styles["row"]}>
         <label>Last commited on : </label>
-        <span>1011-12-12</span>
+        <span>{last_committed_on}</span>
       </div>
       <div className={styles["row"]}>
         <label>Organizations : </label>
-        <span className={styles["organizations"]}>Leapfrog Technology</span>
+        <span className={styles["organizations"]}>
+          {<Organization url={organizationUrl} />}
+        </span>
       </div>
     </div>
   );

@@ -1,0 +1,18 @@
+.orgWrapper {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: left;
+}
+
+.organizationAvatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 50%;
+}
+.organizationAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

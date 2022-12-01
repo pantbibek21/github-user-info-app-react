@@ -52,6 +52,7 @@
   display: block;
   text-align: right;
   color: rgb(1, 1, 87);
+  color: violet;
   font-size: 16px;
 }
 .nameWrapper .username:hover {
@@ -62,6 +63,10 @@
   font-size: 14px;
   margin-left: 20px;
   position: relative;
+  color: rgba(255, 255, 255, 0.593);
+}
+.user-card .count {
+  color: rgba(255, 255, 255, 0.858);
 }
 
 .followers-wrapper .dot {
@@ -77,5 +82,5 @@
   top: -2px;
   left: -22px;
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.743);
+  color: rgba(255, 255, 255, 0.593);
 }

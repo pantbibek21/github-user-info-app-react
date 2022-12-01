@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NotificationMsg from "./NotificationMsg";
 import styles from "./Input.module.css";
 
-function Input({ getUsername }) {
+function Input({ getUsername, reset }) {
   const [input, setInput] = useState("");
   const [notification, setNotification] = useState("");
   const inputValidator = () => {
@@ -30,6 +30,7 @@ function Input({ getUsername }) {
   };
 
   const clearHandler = () => {
+    reset(false);
     setNotification("");
     setInput("");
   };
